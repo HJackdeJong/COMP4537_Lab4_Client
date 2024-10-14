@@ -2,6 +2,7 @@ const MESSAGES = require('../lang/messages/en/user.js').MESSAGES;
 
 // Dynamically set user-facing strings
 document.addEventListener("DOMContentLoaded", function () {
+    document.title = MESSAGES.searchPageTitle;
     document.querySelector("h1").textContent = MESSAGES.searchTitle;
     document.querySelector("label[for='searchWord']").textContent = MESSAGES.searchWordLabel;
     document.querySelector("button[type='submit']").textContent = MESSAGES.searchButton;

@@ -2,6 +2,7 @@ const MESSAGES = require('../lang/messages/en/user.js').MESSAGES;
 
 // Dynamically set user-facing strings
 document.addEventListener("DOMContentLoaded", function () {
+    document.title = MESSAGES.storePageTitle;
     document.querySelector("h1").textContent = MESSAGES.addDefinitionTitle;
     document.querySelector("label[for='word']").textContent = MESSAGES.wordLabel;
     document.querySelector("label[for='definition']").textContent = MESSAGES.definitionLabel;

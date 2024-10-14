@@ -1,5 +1,5 @@
 const MESSAGES = {
-    // Messages from store.js/store.html
+    // Messages for store.html/store.js
     addDefinitionTitle: "Add Word Definition",
     wordLabel: "Word:",
     definitionLabel: "Definition:",
@@ -16,6 +16,10 @@ const MESSAGES = {
     searchResult: "Word: %WORD%, Definition: %DEFINITION%",
     searchNotFound: "Word '%WORD%' not found!",
     searchError: "Error occurred: ",
+
+    // Titles
+    storePageTitle: "Add Definition",
+    searchPageTitle: "Search Definition"
 };
 
 module.exports = { MESSAGES };
