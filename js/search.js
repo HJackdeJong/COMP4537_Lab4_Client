@@ -1,23 +1,35 @@
+const MESSAGES = require('../lang/messages/en/user.js').MESSAGES;
+
+// Dynamically set user-facing strings
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector("h1").textContent = MESSAGES.searchTitle;
+    document.querySelector("label[for='searchWord']").textContent = MESSAGES.searchWordLabel;
+    document.querySelector("button[type='submit']").textContent = MESSAGES.searchButton;
+});
+
 document.getElementById("searchForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
     const searchWord = document.getElementById("searchWord").value;
 
     if (!searchWord) {
-        document.getElementById("result").textContent = "Please enter a word to search for.";
+        document.getElementById("result").textContent = MESSAGES.searchEnterWord;
         return;
     }
 
-    fetch(`https://yourDomainName2.wyz/add/definitions?word=${encodeURIComponent(searchWord)}`)
+    fetch(`https://hjdjprojectvillage.online/COMP4537/labs/4/add/definitions?word=${encodeURIComponent(searchWord)}`)
     .then(response => response.json())
     .then(data => {
         if (data.definition) {
-            document.getElementById("result").textContent = `Word: ${data.word}, Definition: ${data.definition}`;
+            document.getElementById("result").textContent = MESSAGES.searchResult
+                .replace('%WORD%', data.word)
+                .replace('%DEFINITION%', data.definition);
         } else {
-            document.getElementById("result").textContent = data.message;
+            document.getElementById("result").textContent = MESSAGES.searchNotFound
+                .replace('%WORD%', searchWord);
         }
     })
     .catch(error => {
-        document.getElementById("result").textContent = "Error occurred: " + error;
+        document.getElementById("result").textContent = MESSAGES.searchError + error;
     });
 });

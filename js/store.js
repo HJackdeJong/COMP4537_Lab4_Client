@@ -1,3 +1,13 @@
+const MESSAGES = require('../lang/messages/en/user.js').MESSAGES;
+
+// Dynamically set user-facing strings
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector("h1").textContent = MESSAGES.addDefinitionTitle;
+    document.querySelector("label[for='word']").textContent = MESSAGES.wordLabel;
+    document.querySelector("label[for='definition']").textContent = MESSAGES.definitionLabel;
+    document.querySelector("button[type='submit']").textContent = MESSAGES.submitButton;
+});
+
 document.getElementById("storeForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -5,7 +15,7 @@ document.getElementById("storeForm").addEventListener("submit", function(event) 
     const definition = document.getElementById("definition").value;
 
     if (!word || !definition) {
-        document.getElementById("feedback").textContent = "Please provide both a word and a definition.";
+        document.getElementById("feedback").textContent = MESSAGES.provideBothWordAndDefinition;
         return;
     }
 
@@ -23,9 +33,9 @@ document.getElementById("storeForm").addEventListener("submit", function(event) 
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById("feedback").textContent = data.message;
+        document.getElementById("feedback").textContent = data.message || MESSAGES.feedbackSuccess;
     })
     .catch(error => {
-        document.getElementById("feedback").textContent = "Error occurred: " + error;
+        document.getElementById("feedback").textContent = MESSAGES.feedbackError + error;
     });
 });
