@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.title = MESSAGES.searchPageTitle;
     document.querySelector("h1").textContent = MESSAGES.searchTitle;
     document.querySelector("label[for='searchWord']").textContent = MESSAGES.searchWordLabel;
+    document.getElementById("goToStore").textContent = MESSAGES.goToStoreButton;
     document.querySelector("button[type='submit']").textContent = MESSAGES.searchButton;
 });
 
