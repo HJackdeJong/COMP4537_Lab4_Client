@@ -1,4 +1,4 @@
-const MESSAGES = {
+export const MESSAGES = {
     // Messages for store.html/store.js
     addDefinitionTitle: "Add Word Definition",
     wordLabel: "Word:",
@@ -21,5 +21,3 @@ const MESSAGES = {
     storePageTitle: "Add Definition",
     searchPageTitle: "Search Definition"
 };
-
-module.exports = { MESSAGES };
