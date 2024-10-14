@@ -1,4 +1,4 @@
-const MESSAGES = require('../lang/messages/en/user.js').MESSAGES;
+import { MESSAGES } from '../lang/messages/en/user.js';
 
 // Dynamically set user-facing strings
 document.addEventListener("DOMContentLoaded", function () {
