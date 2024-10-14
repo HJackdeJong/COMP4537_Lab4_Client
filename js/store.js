@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("h1").textContent = MESSAGES.addDefinitionTitle;
     document.querySelector("label[for='word']").textContent = MESSAGES.wordLabel;
     document.querySelector("label[for='definition']").textContent = MESSAGES.definitionLabel;
-    document.getElementById("goToSearch").textContent = MESSAGES.goToSearchButton;
+    document.getElementById("goToSearchButton").textContent = MESSAGES.goToSearchButton;
     document.querySelector("button[type='submit']").textContent = MESSAGES.submitButton;
 });
 
