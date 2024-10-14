@@ -1,8 +1,12 @@
 {
-    "rewrites": [
-      {
-        "source": "/COMP4537/labs/4/",
-        "destination": "/store.html"
-      }
-    ]
-  }
+  "rewrites": [
+    {
+      "source": "/COMP4537/labs/4/store.html",
+      "destination": "/store.html"
+    },
+    {
+      "source": "/COMP4537/labs/4/search.html",
+      "destination": "/search.html"
+    }
+  ]
+}
