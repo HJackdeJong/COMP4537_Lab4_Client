@@ -15,9 +15,10 @@ export const MESSAGES = {
     searchButton: "Search",
     goToStoreButton: "Go to Store",
     searchEnterWord: "Please enter a word to search for.",
-    searchResult: "Word: %WORD%, Definition: %DEFINITION%",
+    searchResult: "Word: %WORD%, Definition: %DEFINITION% Request number: %REQUEST%, Word in Dict: %NUMWORDS%",
     searchNotFound: "Word '%WORD%' not found!",
     searchError: "Error occurred: ",
+    requestCount: "Request number: %request%",
 
     // Titles
     storePageTitle: "Add Definition",

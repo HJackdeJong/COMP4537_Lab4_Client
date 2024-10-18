@@ -25,7 +25,9 @@ document.getElementById("searchForm").addEventListener("submit", function(event)
         if (data.definition) {
             document.getElementById("result").textContent = MESSAGES.searchResult
                 .replace('%WORD%', data.word)
-                .replace('%DEFINITION%', data.definition);
+                .replace('%DEFINITION%', data.definition)
+                .replace('%REQUEST%', data.requestNumber)
+                .replace('%NUMWORDS%', data.wordCount);
         } else {
             document.getElementById("result").textContent = MESSAGES.searchNotFound
                 .replace('%WORD%', searchWord);
